@@ -201,7 +201,7 @@ bool cdnfformula_eval_M_DNF (disjunction *m_dnf, bitvector *bv)
   return false;
 }
 
-inline boolformula_t* monomial_to_boolformula (monomial *m)
+boolformula_t* monomial_to_boolformula (monomial *m)
 {
   boolformula_t* ret=boolformula_conjunction_new(vector_length(m)),*temp;
 
@@ -214,7 +214,7 @@ inline boolformula_t* monomial_to_boolformula (monomial *m)
   return ret;
 }
 
-inline boolformula_t* dnf_to_boolformula (disjunction *f)
+boolformula_t* dnf_to_boolformula (disjunction *f)
 {
   boolformula_t* ret=boolformula_disjunction_new(vector_length(f)), *temp;
 
@@ -227,7 +227,7 @@ inline boolformula_t* dnf_to_boolformula (disjunction *f)
   return ret;
 }
 
-inline boolformula_t *cdnfformula_to_boolformula (conjunction * f){
+boolformula_t *cdnfformula_to_boolformula (conjunction * f){
   boolformula_t* ret=boolformula_conjunction_new(vector_length(f)), *temp;
   uscalar_t i;
   for (i = 0; i < vector_length (f); i++) {

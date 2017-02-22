@@ -158,7 +158,7 @@ inline boolformula_t* boolformula_neg (boolformula_t * f){
 
 
 
-inline void add_clauses_to_boolformula(boolformula_t* ret, boolformula_t * f, lit* next_fresh){
+void add_clauses_to_boolformula(boolformula_t* ret, boolformula_t * f, lit* next_fresh){
 	int i;
 	boolformula_t* cur_neg=boolformula_literal_new(boolformula_lit_complement(*next_fresh));
 	boolformula_t* dis, *temp;
